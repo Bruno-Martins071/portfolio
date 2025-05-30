@@ -65,3 +65,7 @@
     .btn:active {
       transform: scale(0.95);
     }
+
+    footer{
+      margin-top: 175px;
+    }
