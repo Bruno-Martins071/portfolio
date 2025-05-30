@@ -1,0 +1,212 @@
+/* Reset e estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #ff9900;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #fff;
+  color: #ff9900;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+/* Seções gerais */
+.secao {
+  padding: 40px 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+/* SOBRE */
+#sobre {
+  background-color: #888;
+  color: #fff;
+}
+
+.sobre-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.foto-com-gradiente {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.foto-com-gradiente img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradiente ao redor da imagem */
+.foto-com-gradiente::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffcc00, #ff6600);
+  z-index: 1;
+  filter: blur(10px);
+  opacity: 0.8;
+}
+
+.sobre-conteudo div:last-child {
+  flex: 1;
+}
+
+/* PORTFÓLIO */
+#portfolio {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.portfolio-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  max-width: 500px;
+  padding: 10px 0;
+}
+
+.card {
+  background-color: #ffcc80;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 2px 2px 5px #aaa;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+}
+
+
+/* SKILLS */
+#skills {
+  background-color: #777;
+  color: #fff;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  font-weight: bold;
+}
+
+.bar {
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.progress {
+  background-color: #000;
+  height: 100%;
+}
+
+/* CONTATO */
+#contato {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.contato-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contato-box {
+  background-color: #fff3e0;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 250px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 20px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .portfolio-cards {
+    max-width: 100%;
+  }
+
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
