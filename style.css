@@ -190,6 +190,14 @@ h2 {
   box-shadow: 2px 2px 5px #ccc;
 }
 
+.contato-box-end {
+  background-color: #fff3e0;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 250px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
 /* RODAPÉ */
 footer {
   text-align: center;
